@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aplikasi Vue #2: One Way & Two way Binding</title>
+
+    <!-- vue cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+    <!-- elemen kontainer untuk aplikasi -->
+    <div id="oneway">
+        <!-- nilai input akan mengambil dari nilai message -->
+        <input type="text" v-bind:value="messageOne">
+        <p>{{messageOne}}</p>
+    </div>
+
+    <!-- elemen kontainer untuk aplikasi -->
+    <div id="twoway">
+        <!-- nilai input akan mengambil dari nilai message -->
+        <input type="text" v-model:value="messageTwo">
+        <p>{{messageTwo}}</p>
+    </div>
+
+    <!-- set text vue -->
+    <script>
+        var one = new Vue({
+            el: "#oneway",
+            data: {
+                messageone: "one way"
+            }
+        })
+
+        var two = new Vue({
+            el: "#twoway",
+            data: {
+                messageTwo: "Two way"
+            }
+        })
+    </script>
+</body>
+
+</html>

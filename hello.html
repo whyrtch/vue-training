@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aplikasi Vue #1e</title>
+
+    <!-- vue cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+    <!-- elemen kontainer untuk aplikasi -->
+    <div id="app">
+        {{message}}
+    </div>
+
+    <!-- set text vue -->
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: "Hello, My First Vue"
+            }
+        })
+    </script>
+</body>
+
+</html>
